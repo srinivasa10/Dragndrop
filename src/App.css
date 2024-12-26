@@ -1,0 +1,53 @@
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .span-item {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .span-item:hover {
+    background-color: #d0e6ff;
+  }
+  
+  .div-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-10px);
+  }
+  
+  .div-item.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  /* SVG Arrow */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 100px; /* Adjust to position arrow beside the span */
+    transform: translateY(-50%);
+    width: 200px;
+    height: 40px;
+    pointer-events: none; /* Make sure arrow doesn't interfere with clicks */
+  }
